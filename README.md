@@ -19,7 +19,6 @@ EventSphere is a comprehensive event management website designed to make event p
 ## Technologies Used  
 - **HTML** – Structured layout and content.  
 - **CSS** – Advanced styling and animations for an elegant look.  
-- **JavaScript** – Interactive features for better engagement.  
 
 ## Setup Instructions  
 1. Clone the repository:  
