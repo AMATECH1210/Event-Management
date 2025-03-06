@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venue</title>
+    <style>
+    body {
+        font-family:'Times New Roman', Times, serif;
+        margin: 0;
+        padding: 0;
+        background-size:cover;
+     }
+     header {
+        color: white;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header img {
+        height: 100px;
+        margin-left: 15px;
+        border: 3px solid white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        transition: box-shadow 0.3s ease-in-out;
+    }
+    header img:hover {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    }
+
+nav {
+position: absolute;
+top: 10px;
+left: 50%;
+transform: translateX(-50%);
+display: flex;
+justify-content: center;
+gap: 20px;
+background: rgba(99, 132, 221, 0.5); 
+padding: 10px 20px;
+border-radius: 20px;
+box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+nav a {
+text-decoration: none;
+color: #ffffff;
+font-weight: bold;
+padding: 8px 15px;
+border-radius: 10px;
+transition: 0.3s ease-in-out;
+}
+
+nav a:hover {
+background: rgba(255, 255, 255, 0.2);
+box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.container {
+            width: 80%;
+            margin: auto;
+            color:white;
+        }
+        .importance {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+            margin-bottom: 30px;
+          
+        }
+        .venue-section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+            margin-bottom: 40px;
+            animation: float 3s infinite ease-in-out;
+        }
+        .venue-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color:#39FF14;
+            font-family:'Times New Roman', Times, serif;
+        }
+        .venue-title h2,p {color:white;}
+        .venue-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .venue-card {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+            width: 200px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: bounce 2s infinite ease-in-out, glow 2s infinite alternate;
+        }
+        .venue-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes glow {
+            0% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.4); }
+            100% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.9); }
+        }
+</style>
+</head>
+<body background="C:\Users\DELL\Desktop\Event Management\Pictures\venue background.webp">
+    <header>
+        <img src="C:\Users\DELL\Desktop\Event Management\Pictures\EventSphere_Logo[1].jpg" alt="EventSphere Logo">
+        <nav>
+            <a href="C:\Users\DELL\Desktop\Event Management\Home.html" target="_blank">Home</a>
+            <a href="C:\Users\DELL\Desktop\Event Management\Services.html" target="_blank">Services</a>
+            <a href="C:\Users\DELL\Desktop\Event Management\Register.html" target="_blank">Register</a>
+            <a href="C:\Users\DELL\Desktop\Event Management\Contact.html" target="_blank">Contact</a>
+        </nav>
+        <h1 style="color: white;"> EVENT SPHERE </h1>
+    </header>
+    <div class="container">
+        <div class="importance">
+            <h2>The Importance of Choosing the Right Venue</h2>
+            <p>
+                The venue plays a crucial role in determining the success of any event. 
+                It sets the ambiance, influences the attendees' experience, and ensures smooth logistics. 
+                A well-chosen venue can elevate an event, while a poor choice can lead to challenges in execution. 
+                Whether it’s a grand hall, an open garden, or a professional conference room, 
+                the right venue ensures a seamless and memorable experience.
+            </p>
+        </div>
+
+        <div class="venue-section">
+            <h3 class="venue-title">Grand Hall</h3>
+            <p>Grand halls are the perfect choice for hosting large-scale events, offering elegance, spacious layouts, 
+                and a sophisticated ambiance. With high ceilings, stunning decor, and state-of-the-art lighting, we 
+                provide a majestic setting for weddings, corporate gatherings, and gala nights. Their ample space allows 
+                for versatile seating arrangements, stages, and dance floors, ensuring a seamless experience for both 
+                hosts and guests. Whether it's a formal dinner or a lively celebration, a grand hall adds a touch of 
+                grandeur and luxury to any event.</p>
+            <div class="venue-container">
+                <div class="venue-card"><img src="C:\Users\DELL\Desktop\Event Management\Pictures\grandhall.png" alt="Grand Hall 1"></div>
+                <div class="venue-card"><img src="C:\Users\DELL\Desktop\Event Management\Pictures\grandhall1.jpeg" alt="Grand Hall 2"></div>
+                <div class="venue-card"><img src="C:\Users\DELL\Desktop\Event Management\Pictures\grandhall2.jpeg" alt="Grand Hall 3"></div>
+                <div class="venue-card"><img src="C:\Users\DELL\Desktop\Event Management\Pictures\grandhall3.jpeg" alt="Grand Hall 4"></div>
+            </div>
+        </div>
+
+        <div class="venue-section">
+            <h3 class="venue-title">Open Garden</h3>
+            <p>Open gardens provide a refreshing and scenic setting for events, blending natural beauty with a serene 
+                ambiance. Surrounded by lush greenery and open skies, they are ideal for weddings, parties, and outdoor 
+                gatherings. The fresh air, natural lighting, and spacious environment create a relaxed and charming 
+                atmosphere, perfect for both formal and casual occasions. Whether it's a daytime celebration or a starlit 
+                evening event, an open garden venue offers a picturesque and unforgettable experience.</p>
+            <div class="venue-container">
+                <div class="venue-card"><img src="C:\Users\DELL\Desktop\Event Management\Pictures\open lawn.jpg" alt="Open Garden 1"></div>
+                <div class="venue-card"><img src="C:\Users\DELL\Desktop\Event Management\Pictures\open lawn1.jpg"" alt="Open Garden 2"></div>
+                <div class="venue-card"><img src="C:\Users\DELL\Desktop\Event Management\Pictures\open lawn2.jpeg" alt="Open Garden 3"></div>
+                <div class="venue-card"><img src="C:\Users\DELL\Desktop\Event Management\Pictures\open lawn 3.jpeg" alt="Open Garden 4"></div>
+            </div>
+        </div>
+
+        <div class="venue-section">
+            <h3 class="venue-title">Conference Room</h3>
+            <p>Conference halls are ideal venues for professional gatherings, meetings, and corporate events. Designed 
+                for productivity and engagement, they offer state-of-the-art facilities, including audiovisual equipment, 
+                comfortable seating, and a structured layout. These spaces provide a formal yet professional ambiance, 
+                ensuring a focused environment for discussions, presentations, and networking. Whether for business 
+                seminars, workshops, or large-scale conferences, a well-equipped conference hall enhances the event’s 
+                efficiency and success.</p>
+            <div class="venue-container">
+                <div class="venue-card"><img src="C:\Users\DELL\Desktop\Event Management\Pictures\conferencehall.webp" alt="Conference Room 1"> </div>
+                <div class="venue-card"><img src="C:\Users\DELL\Desktop\Event Management\Pictures\conferencehall1.jpeg"alt="Conference Room 2"></div>
+                <div class="venue-card"><img src="C:\Users\DELL\Desktop\Event Management\Pictures\conferencehall2.jpeg" alt="Conference Room 3"></div>
+                <div class="venue-card"><img src="C:\Users\DELL\Desktop\Event Management\Pictures\conferncehall3.jpeg" alt="Conference Room 4"></div>
+            </div>
+        </div>
+
+    </div>
+
+
+    
+</body>
+</html>

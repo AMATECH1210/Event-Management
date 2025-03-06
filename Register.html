@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Event Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+            background-size: cover;
+
+
+        }
+        header {
+            color: white;
+            padding: 15px;
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        header img {
+            height: 100px;
+            margin-left: 15px;
+            border: 3px solid white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        header img:hover {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+        }
+    
+    nav {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: rgba(99, 132, 221, 0.5); 
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+        h2
+        {margin-top: 100px;
+        font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+      color:black;
+    font-size:xx-large;}
+
+        .venue-wrapper {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+            margin: 50px auto;
+            width: 80%;
+        }
+        .venue-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            animation: floating 3s infinite ease-in-out;
+        }
+        .venue-card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            width: 250px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        .venue-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(255, 255, 255, 0.7);
+        }
+        .venue-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .register-form {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 10px;
+            width: 50%;
+            margin: auto;
+            margin-top: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 255, 0.8);
+            animation: glow 1.5s infinite alternate, bounce 1.5s infinite, floating 3s infinite ease-in-out;
+        }
+        @keyframes glow {
+            100% {
+                box-shadow: 0 0 10px rgba(0, 0, 255, 0.8);
+            }
+            100% {
+                box-shadow: 0 0 20px rgba(0, 0, 255, 1);
+            }
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        @keyframes floating {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        .register-form input, .register-form select, .register-form button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .register-form input, .register-form select {
+            background: rgba(255, 255, 255, 0.8);
+            color: black;
+            transition: transform 0.2s;
+        }
+        .register-form input:focus, .register-form select:focus {
+            transform: scale(1.05);
+            outline: none;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+        .register-form button {
+            background: #ff5e62;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
+        }
+        .register-form button:hover {
+            background: #e94e54;
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(255, 255, 255, 0.7);
+        }
+        footer {margin-top:50px;}
+    </style>
+</head>
+<body background="C:\Users\DELL\Desktop\Event Management\Pictures\event registration.webp">
+    <header>
+        
+            <img src="C:\Users\DELL\Desktop\Event Management\Pictures\EventSphere_Logo[1].jpg" alt="EventSphere Logo">
+        <nav>
+            <a href="C:\Users\DELL\Desktop\Event Management\Home.html" target="_blank">Home</a>
+            <a href="C:\Users\DELL\Desktop\Event Management\Services.html" target="_blank">Services</a>
+            <a href="C:\Users\DELL\Desktop\Event Management\Register.html" target="_blank">Register</a>
+            <a href="C:\Users\DELL\Desktop\Event Management\Contact.html" target="_blank">Contact</a>
+        </nav>
+        <h1 style="color: white;"> EVENT SPHERE </h1>
+</header>
+    <h2>Choose Your Venue</h2>
+    <div class="venue-wrapper">
+        <div class="venue-container" id="venues">
+            <div class="venue-card">
+                <img src="C:\Users\DELL\Desktop\Event Management\Pictures\grandhall.png" alt="Grand Hall">
+                <p style="font-family: 'Times New Roman', Times, serif; color:black">Venue 1 - Grand Hall</p>
+            </div>
+            <div class="venue-card">
+                <img src="C:\Users\DELL\Desktop\Event Management\Pictures\open lawn.jpg" alt="Open Garden">
+                <p style="font-family: 'Times New Roman', Times, serif; color:black">Venue 2 - Open Garden</p>
+            </div>
+            <div class="venue-card">
+                <img src="C:\Users\DELL\Desktop\Event Management\Pictures\conferencehall.webp" alt="Conference Room">
+                <p style="font-family: 'Times New Roman', Times, serif; color:black">Venue 3 - Conference Room</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function confirmSubmission(event) {
+            event.preventDefault();
+            alert("Your registration has been submitted successfully!");
+            event.target.reset();
+        }
+    </script>
+    <h2>Register for the Event</h2>
+    <div class="register-form" id="register">
+        <form onsubmit="confirmSubmission(event)">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="date" placeholder="Event Date" required>
+            <input type="time" placeholder="Time slot" required>
+            <input type="number" placeholder="Number of guests" required>
+            <input type="tel" placeholder="Contact number" required>
+            <select>
+                <option>Select Venue</option>
+                <option>Grand Hall</option>
+                <option>Open Garden</option>
+                <option>Conference Room</option>
+            </select>
+            <button type="submit">Register Now</button>
+        </form>
+    </div>
+    <footer>
+        &copy; 2025 EventSphere. All Rights Reserved.
+    </footer>
+</body>
+</html>

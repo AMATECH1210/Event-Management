@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            font-family: 'Georgia', cursive;
+            background: url("C:/Users/DELL/Desktop/Event Management/Pictures/Event.jpg") no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+  header {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        header img {
+            height: 100px;
+            margin-left: 15px;
+            border: 3px solid white;
+            border-radius: 50%;
+            box-shadow: 5px 5px 5px cyan;
+            animation: glow 1.5s infinite ;
+        }
+
+        /* Navigation Bar */
+        nav {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: rgba(99, 132, 221, 0.5); 
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+        /* Heading */
+        .heading {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: white;
+            backdrop-filter: blur(10px);
+            padding: 10px;
+            border-radius: 15px;
+            border: 2px solid #00bfff;
+            box-shadow: 0 0 20px #00bfff;
+        }
+
+        .glass-card {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px #00bfff, 0 0 40px #00bfff;
+            animation: float 3s ease-in-out infinite;
+            text-align: center;
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0%, 100% { transform: translate(-50%, -50%) translateY(0px); }
+            50% { transform: translate(-50%, -50%) translateY(-10px); }
+        }
+
+        .glass-card input, .glass-card textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        .glass-card input:focus, .glass-card textarea:focus {
+            border: 1px solid #85f69f;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            background-color: #1d8637;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #176d2d;
+        }
+
+        /* Social Links */
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            padding: 10px;
+            margin: 0 5px;
+            border-radius: 50%;
+            border: 2px solid #00008b;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 0 10px #ff10f0, 0 0 40px #ff10f0, 0 0 80px #ff10f0;
+            display: inline-block;
+        }
+
+        .social-links a:hover {
+            box-shadow: 0 0 20px #0000cd, 0 0 50px #0000cd, 0 0 100px #0000cd;
+            background-color: black;
+        }
+
+        /* Footer */
+        footer {
+            position: absolute;
+            bottom: 10px;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        ::placeholder {
+            color: #d1d1d1;
+            font-style: italic;
+            opacity: 1;
+        }
+
+        input, textarea {
+            color: black;
+            font-size: 1rem;
+            background: rgba(52, 58, 64, 0.5);
+            border: 2px solid transparent;
+            border-radius: 8px;
+            padding: 10px;
+            transition: 0.3s ease-in-out;
+            backdrop-filter: blur(10px);
+        }
+
+        input:focus, textarea:focus {
+            border: 2px solid #ff10f0;
+            box-shadow: 0 0 15px #ff10f0;
+            outline: none;
+        }
+ .parallax-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('cosmic.gif') no-repeat center center/cover;
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+<div class="parallax-bg"></div>
+    <header>
+        <img src="C:\Users\DELL\Desktop\Event Management\Pictures\EventSphere_Logo[1].jpg">
+    <nav>
+        <a href="C:\Users\DELL\Desktop\Event Management\Home.html">Home</a>
+        <a href="C:\Users\DELL\Desktop\Event Management\Services.html">Services</a>
+        <a href="C:\Users\DELL\Desktop\Event Management\Register.html">Register</a>
+        <a href="C:\Users\DELL\Desktop\Event Management\Contact.html">Contact</a>
+    </nav>
+</header>
+    <!-- Contact Form -->
+    <div class="glass-card">
+        <h1 class="heading">Contact Us</h1>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Enter your name">
+            <input type="email" id="email" placeholder="Enter your email">
+            <textarea id="message" rows="4" placeholder="Type Your Message Here..."></textarea>
+            <button class="submit-btn" type="submit">Send</button>
+        </form>
+
+        <!-- Social Links Below Form -->
+        <div class="social-links">
+            <a href="https://www.instagram.com/bangtan_123494/?__pwa=1#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/yourprofile" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="http://www.youtube.com/@manishanayak3863" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="year"></span> EventSphere. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Message sent successfully!");
+            document.getElementById("contactForm").reset();
+        });
+    </script>
+
+</body>
+</html>
